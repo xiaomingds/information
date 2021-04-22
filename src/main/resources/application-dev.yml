@@ -1,0 +1,38 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/museum?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+#  security:
+#    user:
+#     name: user
+#     password: 123456
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    url: jdbc:sqlserver://localhost:1433;DatabaseName=museum
+#    username: root
+#    password: 123456
+#    maxActive: 20
+#    initialSize: 1
+#    maxWait: 60000
+#    minIdle: 1
+#    timeBetweenEvictionRunsMillis: 60000
+#    minEvictableIdleTimeMillis: 300000
+#    validationQuery: select 1
+#    testWhileIdle: true
+#    testOnBorrow: true
+#    testOnReturn: true
+#    poolPreparedStatements: true
+#    maxOpenPreparedStatements: 20
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.example.information.entity
+
+logging:
+  level:
+    com.example.museum.mapper: debug #打印sql
+
